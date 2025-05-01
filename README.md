@@ -1,1 +1,23 @@
-# fantasy-fiefdoms
+# Fantasy Fiefdoms
+
+## Overview
+
+This was my first non-trivial look at Unity with the long-term aim of developing a turn-based strategy game in the style of the original X-COM games. This repo follows a tutorial by "Soul's Game Dev Journey" describing how to implement a TBS using a one layer hex grid. This repo has to follow the tutorial reasonably closely as I don't yet know enough about Unity to deviate too far from it. However, when possible the opportunity was taken to tidy up some of the scruffier bits of C# (i.e. where the author doesn't make use of language features and syntax, leaves lots of nesting, or repetition in place etc).
+
+n.b. The above is not intended as a criticism of the author's C# skills. It should be considered they were writing C# for a tutorial that was aimed at people who were not necessarily C# experts. As such the C# is reasonably quite different to what you might write for the enterprise.
+
+## Initial Setup
+
+The tutorial used editor version 2022.3.4f1. This was not listed as a version I could install using Unity Hub. The closest I had was 2022.3.61f1. I located the exact version from the [download archive](https://unity.com/releases/editor/archive). Using this version seemed like the best idea, even though it was almost two years out of date, rather than risk potential issues caused by version mismatches that I did not yet possess the knowledge to resolve.
+
+The tutorial used the template `3D (URP)`. This was not listed as an option for me. The closest match I had was `Universal 3D`. These both had the same description for the template, and indicated they used URP. This was in spite of the icon for the template seeming to indicate SRP. As with versions I did not possess the knowledge to tell if they were exactly the same. At the time I set the project up the limit of my knowledge was that URP was a type of SRP (along with HDRP), and distinct from BiRP.
+
+This repository was initialised with LFS. Although it was not certain we'd end up with a lot of large assets it seemed better to err on the side of caution. For a relatively short tutorial, and not building a full game it probably did not make a lot of difference either way.
+
+The tutorial was shown using Visual Studio, and presumably the community edition that is installable with the Unity editor. I stuck with using my preferred editor of Rider which was at version 2025.1.1 when I started the tutorial. Similarly, I saw no good reason to not stick to my preferred tooling for Git integration.
+
+## Useful Links
+
+- [YouTube Playlist - Learn to Create a Turn-Based Strategy With Unity](https://www.youtube.com/playlist?list=PLHaBJbUxcrnnUAIB_z5mRprsRwt5ZRCdb)
+- [SoulGameDev Fantasy Fiefdoms Repo](https://github.com/SoulsGameDev/Fantasy-Fiefdoms)
+- [Red Blob Games - Hexagonal Grids](https://www.redblobgames.com/grids/hexagons/)
