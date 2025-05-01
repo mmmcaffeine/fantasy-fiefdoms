@@ -16,6 +16,23 @@ This repository was initialised with LFS. Although it was not certain we'd end u
 
 The tutorial was shown using Visual Studio, and presumably the community edition that is installable with the Unity editor. I stuck with using my preferred editor of Rider which was at version 2025.1.1 when I started the tutorial. Similarly, I saw no good reason to not stick to my preferred tooling for Git integration.
 
+## Chapters
+
+## [Chapter 1 - Learn to Create a Turn-Based Strategy with Unity](https://www.youtube.com/watch?v=khpL0NJ4QMM)
+
+Note that this was simply an introduction and thus there was nothing to actually do.
+
+## [Chapter 2 - Connect Unity with GitHub](https://www.youtube.com/watch?v=KrR4_uVSGKk)
+
+- Initial setup of the Unity project
+- Initial setup of the Rider project / solution
+- Updated the JetBrains Rider Editor package in Unity to 3.0.36
+- Updated the Visual Studio Editor package in Unity to 20.0.23
+- Updated the TextMeshPro package in Unity to 3.0.9
+- Update the Timeline package in Unity to 1.7.7
+
+The tutorial did not suggest updating packages, and this was simply something I elected to do. This means all packages are at the latest versions.
+
 ## Useful Links
 
 - [YouTube Playlist - Learn to Create a Turn-Based Strategy With Unity](https://www.youtube.com/playlist?list=PLHaBJbUxcrnnUAIB_z5mRprsRwt5ZRCdb)
