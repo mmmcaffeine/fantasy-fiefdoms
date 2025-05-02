@@ -33,6 +33,17 @@ Note that this was simply an introduction and thus there was nothing to actually
 
 The tutorial did not suggest updating packages, and this was simply something I elected to do. This means all packages are at the latest versions.
 
+## [Chapter 3 - How To Make A Hex Grid in Unity - Basic Setup](https://www.youtube.com/watch?v=0g0I9V_RhJ8)
+
+- Add the `Assets\Scripts` folder
+- Add the `HexGrid` script to the newly created folder, and outline five things we'd like this to do
+- Add the `HexOrientation` enum
+- Add properties to `HexGrid` to define size, orientation etc
+- Add a new scene and empty game object, and attach the `HexGrid` script to the new game object
+- Add the `HexMetrics` script
+  - Add methods for radii, corners, and centre (noting that the `Corner` method shown has a bug that affects mesh generation later on so I've fixed it)
+- Add `OnDrawGizmos` to `HexGrid` to draw the grid in the Unity editor window
+
 ## Useful Links
 
 - [YouTube Playlist - Learn to Create a Turn-Based Strategy With Unity](https://www.youtube.com/playlist?list=PLHaBJbUxcrnnUAIB_z5mRprsRwt5ZRCdb)
