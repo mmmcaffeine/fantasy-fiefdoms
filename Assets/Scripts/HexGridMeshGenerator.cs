@@ -26,7 +26,7 @@ public class HexGridMeshGenerator : MonoBehaviour
 
     public void ClearHexGridMesh()
     {
-        GetComponent<MeshFilter>()?.sharedMesh.Clear();
+        GetComponent<MeshFilter>()?.sharedMesh?.Clear();
         GetComponent<MeshCollider>()?.sharedMesh?.Clear();
     }
 
