@@ -71,6 +71,17 @@ The tutorial did not suggest updating packages, and this was simply something I 
 - Add mouse click event handlers to `HexGridMeshGenerator`
   - Note that these require several methods adding to `HexMetrics` that are not shown in the tutorial
 
+## [Chapter 6 - Dive Into Scriptable Objects, IEnumerator, Tasks, and Multithreading](https://www.youtube.com/watch?v=ycALJW8X8FI)
+
+- Add the `HexCell` class
+- Add the `TerrainType` scriptable object
+- Add the ResourceManager singleton object
+- Add methods to `HexGrid` to generate cells in the background as the game starts up
+
+### Notes
+
+As with other chapters in this tutorial much of the code presented requires digging around for methods that are not presented in the chapter; this leaves the viewer essentially having to do "best guess".
+
 ## Useful Links
 
 - [YouTube Playlist - Learn to Create a Turn-Based Strategy With Unity](https://www.youtube.com/playlist?list=PLHaBJbUxcrnnUAIB_z5mRprsRwt5ZRCdb)
