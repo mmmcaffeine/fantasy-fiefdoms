@@ -80,6 +80,9 @@ public static class HexMetrics
         return new Vector3(centerX, 0f, centerZ);
     }
 
+    public static Vector3 OffsetToCube(Vector2 offsetCoord, HexOrientation orientation) =>
+        OffsetToCube((int)offsetCoord.x, (int)offsetCoord.y, orientation);
+
     public static Vector3 OffsetToCube(int col, int row, HexOrientation orientation) =>
         orientation == HexOrientation.PointyTop
             ? AxialToCube(OffsetToAxialPointy(col, row))
@@ -163,7 +166,7 @@ public static class HexMetrics
     private static Vector2 AxialRound(Vector2 coordinates) =>
         CubeToAxial(CubeRound(AxialToCube(coordinates.x, coordinates.y)));
 
-    private static Vector2 CubeToAxial(Vector3 cube) => new(cube.x, cube.z);
+    public static Vector2 CubeToAxial(Vector3 cube) => new(cube.x, cube.z);
 
     private static Vector3 CubeRound(Vector3 frac)
     {
