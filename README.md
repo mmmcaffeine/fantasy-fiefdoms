@@ -82,6 +82,20 @@ The tutorial did not suggest updating packages, and this was simply something I 
 
 As with other chapters in this tutorial much of the code presented requires digging around for methods that are not presented in the chapter; this leaves the viewer essentially having to do "best guess".
 
+## Conclusion
+
+After having worked through to the end of Chapter 6 I decided to abandon attempts at following this tutorial; it was too painful and not at all productive.
+
+The structure of the videos was not conducive to learning. Much was stock footage with narration from one of the poorer quality AI voice overs I've heard recently. Chapter 6 in particular had a significant amount of the narration being filler and waffle.
+
+In terms of content much of the code presented for a given chapter didn't actually compile unless you went digging around in the author's Git repo. There was no indication of when / if that code would be introduced as part of the tutorial. In addition, there were often actions required in the Unity Editor that were completely glossed over.
+
+Considering where the tutorial started (literally from installing Unity Hub, and explaining what different windows in the Unity Editor were) the regular skipping of information or omission of important things meant it was too much to follow along.
+
+This seemed very much like the author had built something in Unity, then tried to extract a tutorial from it, but didn't check whether the videos made sense when watched from start to finish (i.e. not having the end product from the beginning).
+
+Ultimately, I decided my time would be better spent looking for a tutorial that was constructed more coherently.
+
 ## Useful Links
 
 - [YouTube Playlist - Learn to Create a Turn-Based Strategy With Unity](https://www.youtube.com/playlist?list=PLHaBJbUxcrnnUAIB_z5mRprsRwt5ZRCdb)
