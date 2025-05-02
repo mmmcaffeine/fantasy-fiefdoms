@@ -41,8 +41,28 @@ The tutorial did not suggest updating packages, and this was simply something I 
 - Add properties to `HexGrid` to define size, orientation etc
 - Add a new scene and empty game object, and attach the `HexGrid` script to the new game object
 - Add the `HexMetrics` script
-  - Add methods for radii, corners, and centre (noting that the `Corner` method shown has a bug that affects mesh generation later on so I've fixed it)
+  - Add methods for radii, corners, and centre (noting that the `Corner` method shown has a bug that affects mesh generation later on, so I've fixed it)
 - Add `OnDrawGizmos` to `HexGrid` to draw the grid in the Unity editor window
+
+## [Chapter 4 - Custom Editor and Procedural Mesh Generation](https://www.youtube.com/watch?v=OTWzyUKkCxE)
+
+- Add the `HexGridMeshGenerator` script with appropriate `RequireComponent` attributes
+  - Add method for generating the hex mesh
+  - Add method for clearing the hex mesh
+- Add a custom editor for `HexGridMeshGenerator`
+- Add a custom editor for `HexGrid`
+  - Note the positioning of labels used in the tutorial causes them to overlap
+- Add a `Grid` layer to the Grid object (from the `Layer` drop down in the Inspector) (optional)
+- Add the `HexGridMeshGenerator` script to the Grid object
+  - Set the `HexGrid` property to the Grid object
+  - Set the `Grid Layer` property to it (optional)
+
+### Notes
+
+- This requires methods adding to the `HexMetrics` class that are _not_ shown in the tutorial video. These can be found from the repo associated with the tutorial
+- Assigning the `HexGridMeshGenerator` to the Grid object is not explicitly shown in the tutorial
+- Labels created by the `HexGridEditor` overlap if positioned as shown in the tutorial
+- Adding the `Grid` layer is optional
 
 ## Useful Links
 
