@@ -61,7 +61,6 @@ public static class HexMetrics
 
                 break;
             default:
-                // TODO Throw
                 throw new ArgumentOutOfRangeException(nameof(orientation), orientation,
                     "The orientation of the hex grid is invalid.");
         }
