@@ -127,8 +127,10 @@ public static class HexMetrics
             ? CubeToOffsetPointy(x, y, z)
             : CubeToOffsetFlat(x, y, z);
 
+    // TODO Verify this; we're typically using x and z, with y always being 0
     private static Vector2 CubeToOffsetPointy(int x, int y, int z) => new(x + (y - (y & 1)) / 2, y);
 
+    // TODO Verify this; we're typically using x and z, with y always being 0
     private static Vector2 CubeToOffsetFlat(int x, int y, int z) => new(x, y + (x - (x & 1)) / 2);
 
     private static Vector2 CoordinateToAxial(float x, float z, float hexSize, HexOrientation orientation) =>
