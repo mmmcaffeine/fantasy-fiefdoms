@@ -10,6 +10,9 @@ public static class HexMetrics
 
     public static float InnerRadius(float hexSize)
     {
+        // hexSize * (2 * √3)
+        // i.e. 2 * √3 ≈ 0.866025404
+
         return hexSize * 0.866025404f;
     }
 
