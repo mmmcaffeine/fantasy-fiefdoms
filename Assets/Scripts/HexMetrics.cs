@@ -3,6 +3,15 @@ using UnityEngine;
 
 public static class HexMetrics
 {
+    // Coordinate types in this class:
+    //
+    // Offset - The typical (x, y, z) coordinates we would more typically associate with cartesian coordinates
+    // Cube - Representing the three direction as a slice through a cube where (q + r + s) == 0
+    // Axial - As with cube, but `s` is not stored as it can be derived from `q` and `r`
+    //
+    // Note that we use q, r, and s for the hexagonal coordinates (cube, and axial) to avoid confusion with the
+    // axes used in cartesian coordinates
+
     public static float OuterRadius(float hexSize)
     {
         return hexSize;
