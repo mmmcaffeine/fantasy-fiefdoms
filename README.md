@@ -64,6 +64,13 @@ The tutorial did not suggest updating packages, and this was simply something I 
 - Labels created by the `HexGridEditor` overlap if positioned as shown in the tutorial
 - Adding the `Grid` layer is optional
 
+## [Chapter 5 - Convert Mouse Clicks to Hex Grid](https://www.youtube.com/watch?v=yrlr1vsvk5w)
+
+- Add a base class for singleton components
+- Add a `MouseController` singleton using the base class just developed that raises events when mouse buttons are clicked
+- Add mouse click event handlers to `HexGridMeshGenerator`
+  - Note that these require several methods adding to `HexMetrics` that are not shown in the tutorial
+
 ## Useful Links
 
 - [YouTube Playlist - Learn to Create a Turn-Based Strategy With Unity](https://www.youtube.com/playlist?list=PLHaBJbUxcrnnUAIB_z5mRprsRwt5ZRCdb)
