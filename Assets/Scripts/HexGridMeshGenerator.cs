@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer), typeof(MeshCollider))]
@@ -6,6 +7,8 @@ public class HexGridMeshGenerator : MonoBehaviour
 {
     [field: SerializeField] public LayerMask GridLayer { get; private set; }
     [field: SerializeField] public HexGrid HexGrid { get; private set; }
+
+    public Transform explosionTest;
 
     public void Awake()
     {
@@ -22,6 +25,46 @@ public class HexGridMeshGenerator : MonoBehaviour
                 nameof(HexGrid)
             );
         }
+    }
+
+    private void OnEnable()
+    {
+        MouseController.Instance.OnLeftMouseClick += OnLeftMouseClick;
+        MouseController.Instance.OnRightMouseClick += OnRightMouseClick;
+    }
+
+    private void OnDisable()
+    {
+        MouseController.Instance.OnLeftMouseClick -= OnLeftMouseClick;
+        MouseController.Instance.OnRightMouseClick -= OnRightMouseClick;
+    }
+
+    private void OnLeftMouseClick([NotNull] RaycastHit hitInfo)
+    {
+        Debug.LogFormat("OnLeftMouseClick - Hit object: {0} at position {1}", hitInfo.transform.name, hitInfo.point);
+
+        var localX = hitInfo.point.x - hitInfo.transform.position.x;
+        var localZ = hitInfo.point.z - hitInfo.transform.position.z;
+
+        var location = HexMetrics.CoordinateToOffset(localX, localZ, HexGrid.HexSize, HexGrid.Orientation);
+
+        Debug.LogFormat("OnLeftMouseClick - Left-clicked on Hex: {0}", location);
+    }
+
+    private void OnRightMouseClick([NotNull] RaycastHit hitInfo)
+    {
+        Debug.LogFormat("OnRightMouseClick - Hit object: {0} at position {1}", hitInfo.transform.name, hitInfo.point);
+
+        var localX = hitInfo.point.x - hitInfo.transform.position.x;
+        var localZ = hitInfo.point.z - hitInfo.transform.position.z;
+
+        var location = HexMetrics.CoordinateToOffset(localX, localZ, HexGrid.HexSize, HexGrid.Orientation);
+        var center = HexMetrics.Center(HexGrid.HexSize, (int)location.x, (int)location.y, HexGrid.Orientation);
+
+        Debug.LogFormat("OnRightMouseClick - Right-clicked on Hex: {0}", location);
+
+        // We have not set up the explosionTest yet
+        //Instantiate(explosionTest, center, Quaternion.identity);
     }
 
     public void ClearHexGridMesh()
